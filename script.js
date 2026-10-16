@@ -1,4 +1,26 @@
 const header = document.querySelector('.header');
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+
+const closeMenu = () => {
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.setAttribute('aria-label', 'Открыть меню');
+  nav.classList.remove('open');
+  document.body.classList.remove('menu-open');
+};
+
+menuToggle.addEventListener('click', () => {
+  const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', String(!isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Открыть меню' : 'Закрыть меню');
+  nav.classList.toggle('open', !isOpen);
+  document.body.classList.toggle('menu-open', !isOpen);
+});
+
+nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
+window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
+
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 18);
 }, { passive: true });
