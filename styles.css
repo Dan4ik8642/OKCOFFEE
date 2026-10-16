@@ -266,6 +266,8 @@ img,svg{max-width:100%}
   .header{padding-inline:14px}.header .brand{gap:8px}.header .brand span{font-size:14px}.brand-logo{width:42px;height:42px;border-radius:13px}
   .section{padding:60px 16px}
   .hero{padding-top:40px;padding-bottom:52px}
+  .hero h1{width:100%;max-width:100%;font-size:clamp(40px,10.5vw,46px);line-height:1.03;letter-spacing:-.055em;overflow-wrap:anywhere}
+  .hero h1 em{display:block;max-width:100%}
   .eyebrow{font-size:10px;letter-spacing:.15em;margin-bottom:14px}
   .hero-art{min-height:405px;width:calc(100% + 18px);margin-inline:-9px;overflow:visible}
   .orbit-a{width:310px;height:310px}.orbit-b{width:365px;height:365px}
@@ -287,7 +289,7 @@ img,svg{max-width:100%}
 
 @media(max-width:390px){
   .header .brand span{font-size:12px}
-  h1{font-size:clamp(40px,12vw,47px)}h2{font-size:clamp(35px,10vw,42px)}
+  h1{font-size:clamp(38px,10.5vw,41px)}h2{font-size:clamp(35px,10vw,42px)}
   .hero{padding-inline:12px}.lead{font-size:15px}
   .proof-row div{padding-inline:5px}.proof-row strong{font-size:15px}.proof-row span{font-size:9px}
   .hero-art{min-height:370px}.orbit-a{width:280px;height:280px}.orbit-b{width:330px;height:330px}.cup{transform:scale(.64)!important}
